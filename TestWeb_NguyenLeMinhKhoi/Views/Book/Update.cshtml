@@ -1,0 +1,32 @@
+﻿@model Book
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+    <h2>Cập nhật sách</h2>
+    <hr />
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group pb-2">
+                <label>Tên</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-2">
+                <label>Tác giả</label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-2">
+                <label>Giá tiền</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-2">
+                <label>Số lượng</label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Cập nhật</button>
+            <a asp-action="Index" class="btn btn-secondary">Quay về danh sách</a>
+        </div>
+    </div>
+</form>
